@@ -3,8 +3,9 @@ package ru.netology.service;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CashbackHackServiceTest {
+public class CashbackHackServiceTestNG {
 
+    // remain(1000) -> 1000 - (1000 % 1000) = 1000
     @Test
     public void shouldReturnRemainFor1000() {
         CashbackHackService service = new CashbackHackService();
@@ -13,6 +14,7 @@ public class CashbackHackServiceTest {
         Assert.assertEquals(actual, expected);
     }
 
+    // remain(900) -> 1000 - 900 = 100
     @Test
     public void shouldReturnRemainFor900() {
         CashbackHackService service = new CashbackHackService();
@@ -21,6 +23,7 @@ public class CashbackHackServiceTest {
         Assert.assertEquals(actual, expected);
     }
 
+    // remain(0) -> 1000 - 0 = 1000
     @Test
     public void shouldReturnRemainFor0() {
         CashbackHackService service = new CashbackHackService();
@@ -29,6 +32,7 @@ public class CashbackHackServiceTest {
         Assert.assertEquals(actual, expected);
     }
 
+    // remain(1501) -> 1000 - (1501 % 1000) = 1000 - 501 = 499
     @Test
     public void shouldReturnRemainFor1501() {
         CashbackHackService service = new CashbackHackService();
